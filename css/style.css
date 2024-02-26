@@ -399,26 +399,30 @@ a {
   height: 100%;
   z-index: -1;
 }
-/* .banner-area.contact {
-  background: url(../img/banner/blog.png) left center no-repeat;
+.banner-area.contact {
+  background: url(../img/home/carousel-2.png) left top no-repeat;
   background-size: cover;
-} */
+}
 /* .banner-area.about {
   background: url(../img/banner/blog.png) left center no-repeat;
   background-size: cover;
 } */
-/* .banner-area.service {
-  background: url(../img/banner/blog.png) left center no-repeat;
-  background-size: cover;
-} */
+
 /* .banner-area.team {
   background: url(../img/banner/blog.png) left center no-repeat;
   background-size: cover;
 } */
-/* .banner-area.pricing {
-  background: url(../img/banner/blog.png) left center no-repeat;
-  background-size: cover;
-} */
+
+.banner-video {
+  position: absolute; /* Position video within container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale video to fill container, maintaining aspect ratio */
+  z-index: -1; /* Place video behind content in the stacking context */
+}
+
 .banner-area__content {
   position: absolute;
   width: 100%;
@@ -426,6 +430,7 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   margin-top: 70px;
+  color: white; /* Adjust content color for visibility over video */
 }
 .banner-area__content h1 {
   font-size: 50px;
@@ -542,6 +547,10 @@ a {
   display: inline-block;
   line-height: 80px;
 }
+video{
+  width: 100%;
+  height: 100%;
+}
 .card-feature__icon i, .card-feature__icon span {
   color: #078098;
   font-size: 60px;
@@ -565,13 +574,7 @@ a {
 }
 
 
-.card-service {
-  border-color: transparent;
-  border-radius: 0;
-  padding: 40px 38px 35px 38px;
-  background: #fff9f7;
-  transition: all 0.4s ease;
-}
+
 .card-service-wrapper [class*=col-]:nth-child(even) {
   margin-top: 50px;
 }
@@ -667,7 +670,7 @@ a {
 }
 
 .video-area {
-  /* background: url("../img/home/video-bg.png") left center no-repeat; */
+  background: url("../img/home/video-bg.jpg") left center no-repeat;
   background-size: cover;
   padding: 50px 10px;
   position: relative;
