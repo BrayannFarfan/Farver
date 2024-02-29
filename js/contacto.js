@@ -53,7 +53,7 @@ async function handleSubmitContact(e){
         }
         
     } catch (error) {
-        error.innerText = 'Error al enviar el mensaje intentelo otra vez'
+       return error.innerText = 'Hay un Error por ahora, intentelo mas tarde'
     } finally {
         setTimeout(() => {
             contac_send.innerText = '';
