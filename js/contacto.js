@@ -1,8 +1,5 @@
-const D = document;
 
-
-
-const form = D.getElementById('contactForm');
+const form = document.getElementById('contactForm');
 
 
 async function handleSubmitContact(e){
