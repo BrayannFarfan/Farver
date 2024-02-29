@@ -5,6 +5,7 @@ const loader = document.getElementById('loader');
 const button = document.getElementById('button');
 const contac_send = document.getElementById('contac_send');
 const error = document.getElementById('error');
+const campos_vacios = document.getElementById('campos_vacios');
 
 
 form.addEventListener('submit', handleSubmitContact);
@@ -12,17 +13,17 @@ form.addEventListener('submit', handleSubmitContact);
 async function handleSubmitContact(e){
     e.preventDefault();
 
-    // const name = document.getElementById('name').value;
-    // const email = document.getElementById('email').value;
-    // const mensaje = document.getElementById('mensaje').value;
-    // const subject = document.getElementById('subject').value;
-    // const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
     
  
-    // if (name.trim() === '' || email.trim() === '' || mensaje.trim() === '' || subject.trim() === '' || message.trim() === '') {
-    //     alert('Por favor completa todos los campos.');
-    //     return; 
-    // }
+    if (name.trim() === '' || email.trim() === '' || mensaje.trim() === '' || subject.trim() === '' || message.trim() === '') {
+        campos_vacios.innerText = 'Por favor completa todos los campos.';
+        return; 
+    }
 
     button.disabled = true;
 
