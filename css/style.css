@@ -1222,3 +1222,11 @@ video{
 .my-float{
   margin-top:16px;
 }
+.oculto{
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.exito{
+  color: #012b06;
+}
