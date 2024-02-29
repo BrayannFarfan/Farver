@@ -4,12 +4,25 @@ const container_bottom = document.getElementById('container_bottom');
 const loader = document.getElementById('loader');
 const button = document.getElementById('button');
 const contac_send = document.getElementById('contac_send');
+const error = document.getElementById('error');
 
 
 form.addEventListener('submit', handleSubmitContact);
 
 async function handleSubmitContact(e){
     e.preventDefault();
+
+    // const name = document.getElementById('name').value;
+    // const email = document.getElementById('email').value;
+    // const mensaje = document.getElementById('mensaje').value;
+    // const subject = document.getElementById('subject').value;
+    // const message = document.getElementById('message').value;
+    
+ 
+    // if (name.trim() === '' || email.trim() === '' || mensaje.trim() === '' || subject.trim() === '' || message.trim() === '') {
+    //     alert('Por favor completa todos los campos.');
+    //     return; 
+    // }
 
     button.disabled = true;
 
@@ -40,7 +53,7 @@ async function handleSubmitContact(e){
         }
         
     } catch (error) {
-        
+        error.innerText = 'Error al enviar el mensaje intentelo otra vez'
     } finally {
         setTimeout(() => {
             contac_send.innerText = '';
