@@ -2,6 +2,8 @@
 const form = document.getElementById('contactForm');
 
 
+form.addEventListener('submit', handleSubmitContact);
+
 async function handleSubmitContact(e){
     e.preventDefault();
 
@@ -22,5 +24,5 @@ async function handleSubmitContact(e){
 }
 
 
-form.addEventListener('submit', handleSubmitContact);
+
 
