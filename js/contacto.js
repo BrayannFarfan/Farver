@@ -15,13 +15,14 @@ async function handleSubmitContact(e){
 
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const mensaje = document.getElementById('mensaje').value;
     const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    
+    const message = document.getElementById('message').value;    
  
-    if (name.trim() === '' || email.trim() === '' || mensaje.trim() === '' || subject.trim() === '' || message.trim() === '') {
+    if (name.trim() === '' || email.trim() === '' || subject.trim() === '' || message.trim() === '') {
         campos_vacios.innerText = 'Por favor completa todos los campos.';
+        setTimeout(() => {
+            campos_vacios.innerText = '';
+        }, 2000);
         return; 
     }
 
